@@ -1,0 +1,117 @@
+.parkView-nav{
+    margin: -15px -5px 0;
+    .parkView-nav__item{
+        color: $color013D57;
+        font-size: 18px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        padding: 5px 5px 30px;
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+        & + label {
+            font-weight: 500;
+        }
+        &:checked{
+            & + label {
+                color: $colorWhite;
+                background: $colorF55790;
+                // @include transition(0s);
+                span{
+                    // @include transition(0s);
+                }
+                &:hover{
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+    .parkView-nav__link{
+        width: 100%;
+        width: 256px;
+        height: 80px;
+        color: $color013D57;
+        background: $colorWhite;
+        @include box-shadow(0px 10px 15px rgba(0, 12, 75, 0.05));
+        @include border-radius(5px);
+        @include transition(.3s);
+        &.active{
+            pointer-events: none;
+            color: $colorWhite;
+            background: $colorF55790;
+        }
+        &:not(.active):hover{
+            color: $color013D57;
+            @include transform(translate(0, -3px));
+            picture{
+                @include transform(translate(2px, 0));
+            }
+            span{
+                @include transform(translate(-3px, 0));
+            }
+        }
+    }
+    picture{
+        width: 110px;
+        @include transition(.3s);
+    }
+    span{
+        width: calc(100% - 110px);
+        padding: 0 10px; 
+        -webkit-font-smoothing: subpixel-antialiased;
+        @include transform(translateZ(0) scale(1.0, 1.0));
+        @include transition(transform .3s);
+    }
+    .slick-track{
+        margin: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    .parkView-nav{
+        margin: -15px -5px 0;
+        .parkView-nav__item{
+            font-size: 16px;
+            line-height: 100%;
+            padding: 5px 5px 30px;
+        }
+        .parkView-nav__link{
+            width: 100%;
+            width: 246px;
+            height: 80px;
+        }
+        picture{
+            width: 100px;
+        }
+        span{
+            width: calc(100% - 100px);
+            padding: 0 10px; 
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .parkView-nav{
+        margin: -15px -5px 0;
+        .parkView-nav__item{
+            font-size: 14px;
+            line-height: 100%;
+            padding: 5px 5px 30px;
+        }
+        .parkView-nav__link{
+            width: 100%;
+            width: 216px;
+            height: 70px;
+        }
+        picture{
+            width: 90px;
+        }
+        span{
+            width: calc(100% - 90px);
+            padding: 0 10px; 
+        }
+    }
+}

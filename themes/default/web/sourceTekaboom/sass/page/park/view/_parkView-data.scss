@@ -1,0 +1,179 @@
+.parkView-data{
+    .parkView-data__item{
+        padding: 20px 0 25px;
+        border-bottom: 1px solid #DFE0EB;
+        &.parkView-data__item_terms{
+            padding-top: 30px;
+        }
+        &.parkView-data__item_but{
+            padding-bottom: 10px;
+        }
+        &:first-child{
+            padding-top: 0;
+        }
+        &:last-child{
+            border: none;
+        }
+    }
+    .parkView-data__header{
+        color: $color999999;
+        font-size: 16px;
+        font-family: $fontRegular;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 19px;
+        margin: 0 0 5px;
+    }
+    .parkView-data__value{
+        color: $color013D57;
+        font-size: 24px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        &.park-station{
+            ul{
+                li{
+                    font-size: 24px;
+                    line-height: 100%;
+                    &:before{
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parkView-data-link{
+    color: $color013D57;
+    a{
+        color: $color013D57;
+    }
+}
+
+.parkView-data-but{
+    margin: 0 -5px;
+    a{
+        margin: 0 5px 10px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .parkView-data{
+        .parkView-data__item{
+            padding: 20px 0 25px;
+            &.parkView-data__item_terms{
+                padding-top: 30px;
+            }
+            &.parkView-data__item_but{
+                padding-bottom: 10px;
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                border: none;
+            }
+        }
+        .parkView-data__header{
+            font-size: 14px;
+            line-height: 17px;
+            margin: 0 0 5px;
+        }
+        .parkView-data__value{
+            font-size: 22px;
+            line-height: 100%;
+            &.park-station{
+                ul{
+                    li{
+                        font-size: 22px;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .parkView-data{
+        .parkView-data__item{
+            padding: 18px 0 23px;
+            &.parkView-data__item_terms{
+                padding-top: 28px;
+            }
+            &.parkView-data__item_but{
+                padding-bottom: 10px;
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                border: none;
+            }
+        }
+        .parkView-data__value{
+            font-size: 20px;
+            line-height: 100%;
+            &.park-station{
+                ul{
+                    li{
+                        font-size: 20px;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-data{
+        .parkView-data__item{
+            padding: 15px 0 20px;
+            &.parkView-data__item_terms{
+                padding-top: 25px;
+            }
+            &.parkView-data__item_but{
+                padding-bottom: 10px;
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                border: none;
+            }
+        }
+        .parkView-data__value{
+            font-size: 18px;
+            line-height: 100%;
+            &.park-station{
+                ul{
+                    li{
+                        font-size: 18px;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-data{
+        .parkView-data__value{
+            font-size: 16px;
+            line-height: 100%;
+            &.park-station{
+                ul{
+                    li{
+                        font-size: 16px;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

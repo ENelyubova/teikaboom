@@ -1,0 +1,47 @@
+.parkView-content{
+    overflow: hidden;
+    h1{
+        text-transform: none;
+        strong{
+            color: $colorF55790;
+            font-weight: 500;
+        }
+    }
+    a{
+        color: $color013D57;
+    }
+    p{
+        margin: 0 0 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-content{
+        h1{
+            padding: 0 0 25px;
+        }
+        p{
+            margin: 0 0 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .parkView-content{
+        h1{
+            padding: 10px 0 15px;
+            br{
+                display: none;
+            }
+        }
+        p{
+            margin: 0 0 15px;
+        }
+    }
+}
+@import "_parkView-header";
+@import "_parkView-nav";
+@import "_parkView-data";
+@import "_parkView-carousel";
+@import "_parkView-info";
+@import "_parkView-childpage";

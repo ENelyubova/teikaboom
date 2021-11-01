@@ -1,0 +1,202 @@
+.news-view{
+    .news-view__content{
+        width: calc(100% - 335px);
+        margin: 0 0 20px;
+    }
+    .news-view__sidebar{
+        width: 315px;
+    }
+}
+
+.news-header-data{
+    color: $colorWhite;
+    font-size: 14px;
+    font-family: $fontMedium;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin: 0 -10px;
+    .news-header-data__item{
+        @include flexboxImp();
+        width: auto;
+        height: 35px;
+        margin: 0 10px 10px;
+    }
+    .news-park-badge{
+        text-transform: none;
+    }
+}
+
+.news-view-content{
+    .news-view-content__img{
+        margin: 0 0 35px;
+        source, img{
+            @include border-radius(10px);
+        }
+    }
+    .news-view-content__txt{
+
+    }
+    h3{
+        color: $color013D57;
+        font-size: 36px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        margin: 0 0 15px;
+        padding: 0;
+    }
+    h4{
+        color: $color013D57;
+        font-size: 24px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        margin: 0 0 15px;
+        padding: 0;
+        a{
+            display: inline-block;
+        }
+    }
+    a{
+        color: $color013D57;
+    }
+    p{
+        margin: 0 0 20px;
+    }
+}
+
+.news-view-sidebar{
+    .news-view-sidebar__header{
+        color: $color013D57;
+        font-size: 24px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        margin: 0 0 15px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .news-view{
+        .news-view__content{
+            width: calc(100% - 320px);
+            margin: 0 0 20px;
+        }
+        .news-view__sidebar{
+            width: 300px;
+        }
+    } 
+    
+    .news-view-content{
+        .news-view-content__img{
+            margin: 0 0 30px;
+        }
+        h3{
+            font-size: 34px;
+            line-height: 100%;
+        }
+        h4{
+            font-size: 22px;
+            line-height: 100%;
+        }
+        p{
+            margin: 0 0 20px;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .news-view-content{
+        .news-view-content__img{
+            margin: 0 0 30px;
+        }
+        h3{
+            font-size: 32px;
+            line-height: 100%;
+        }
+        h4{
+            font-size: 20px;
+            line-height: 100%;
+        }
+        p{
+            margin: 0 0 20px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .news-view{
+        .news-view__content{
+            width: 100%;
+            margin: 0 0 40px;
+        }
+        .news-view__sidebar{
+            width: 100%;
+        }
+    } 
+    .news-header-data{
+        margin: 0 -8px;
+        .news-header-data__item{
+            height: 32px;
+            margin: 0 8px 8px;
+        }
+    }
+    .news-view-content{
+        h3{
+            font-size: 28px;
+            line-height: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .news-view-content{
+        .news-view-content__img{
+            margin: 0 0 25px;
+            source, img{
+                @include border-radius(5px);
+            }
+        }
+        h3{
+            font-size: 26px;
+            line-height: 100%;
+            margin: 0 0 12px;
+        }
+        h4{
+            font-size: 18px;
+            line-height: 100%;
+            margin: 0 0 12px;
+        }
+        p{
+            margin: 0 0 15px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .news-header-data{
+        font-size: 13px;
+        line-height: 16px;
+        margin: 0 -6px;
+        .news-header-data__item{
+            height: 30px;
+            margin: 0 6px 10px;
+            &.news-park-badge {
+                font-size: 13px;
+                line-height: 18px;
+                padding: 5px 8px;
+            }
+        }
+    }
+    .news-view-content{
+        h3{
+            font-size: 24px;
+            line-height: 100%;
+        }
+    }
+}

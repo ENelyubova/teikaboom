@@ -1,0 +1,38 @@
+.page-content{
+    padding: 0 0 70px;
+    @media (max-width: 768px) {
+        padding: 0 0 50px;
+    }
+}
+
+.ya-share2__list.ya-share2__list_direction_horizontal{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    margin: 0 -3px !important;
+}
+
+.ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item{
+    margin: 0 3px 6px !important;
+}
+
+.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon{
+    height: 38px !important;
+    width: 38px !important;
+    background-size: 38px 38px !important;
+}
+
+
+@import "_breadcrumb";
+@import "_pagination";
+@import "_page-header";
+@import "./news/_index";
+@import "./park/_index";
+@import "_stillQuestions-box";
+@import "./masterClass/_index";
+@import "./contact/_index";
+@import "./afisha/_index";
+@import "_error";
+@import "_vacancy";
+@import "./price/_index";
+@import "./restaurant/_index";
+@import "./about/_index";

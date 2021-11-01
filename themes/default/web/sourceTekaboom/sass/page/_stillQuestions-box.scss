@@ -1,0 +1,169 @@
+.stillQuestions-box{
+    min-height: 430px;
+    margin: -10px 0 0;
+    @include background-gradient('top', rgba(245, 246, 252, 0), #F5F6FC, 0%, 52.09%);
+    .content{
+        position: relative;
+    }
+    .stillQuestions-box__img{
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        bottom: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+    .stillQuestions-box__content,
+    .stillQuestions-box__contact{
+        position: relative;
+        z-index: 1;
+        padding: 60px 0;
+    }
+    .stillQuestions-box__content{
+        width: 480px;
+    }
+    .stillQuestions-box__contact{
+        width: 420px;
+        .stillQuestions-box__header{
+            text-transform: none;
+        }
+    }
+    .stillQuestions-box__header, .contact-phone{
+        display: inline-block;
+        @extend .h1Home-style;
+        margin: 0 0 12px;
+    }
+    .stillQuestions-box__desc{
+        p{
+            margin: 0 0 25px;
+        }
+    }
+}
+
+.masterclass-stillQuestions-section{
+    .stillQuestions-box{
+        .content{
+            border-top: 1px solid $colorDFE0EB;
+        }
+        .stillQuestions-box__content,
+        .stillQuestions-box__contact{
+            padding: 60px 0;
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .stillQuestions-box{
+        min-height: 380px;
+        margin: -10px 0 0;
+        .stillQuestions-box__content,
+        .stillQuestions-box__contact{
+            padding: 60px 0;
+        }
+        .stillQuestions-box__content{
+            width: 410px;
+        }
+        .stillQuestions-box__contact{
+            width: 385px;
+        }
+        .stillQuestions-box__desc{
+            p{
+                margin: 0 0 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .stillQuestions-box{
+        min-height: 340px;
+        margin: -10px 0 0;
+        .stillQuestions-box__content,
+        .stillQuestions-box__contact{
+            padding: 50px 0;
+        }
+        .stillQuestions-box__content{
+            width: 360px;
+        }
+        .stillQuestions-box__contact{
+            width: 340px;
+        }
+        .stillQuestions-box__desc{
+            p{
+                margin: 0 0 25px;
+            }
+        }
+    }
+    .masterclass-stillQuestions-section{
+        .stillQuestions-box{
+            .stillQuestions-box__content,
+            .stillQuestions-box__contact{
+                padding: 50px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .stillQuestions-box{
+        .stillQuestions-box__content,
+        .stillQuestions-box__contact{
+            padding: 40px 0 10px;
+        }
+        .stillQuestions-box__content{
+            width: 360px;
+        }
+        .stillQuestions-box__contact{
+            width: 300px;
+        }
+        .stillQuestions-box__img{
+            position: relative;
+            z-index: 0;
+            bottom: auto;
+            left: auto;
+            margin: -30px -20px 0;
+            width: calc(100% + 40px);
+            @include transform(translateX(0));
+        }
+    }
+    .masterclass-stillQuestions-section{
+        .stillQuestions-box{
+            .stillQuestions-box__content,
+            .stillQuestions-box__contact{
+                padding: 40px 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .stillQuestions-box{
+        .stillQuestions-box__content{
+            width: 100%;
+            padding: 0 0 20px;
+        }
+        .stillQuestions-box__contact{
+            width: 340px;
+            padding: 0 0 20px;
+        }
+    }
+    .masterclass-stillQuestions-section{
+        .stillQuestions-box{
+            .stillQuestions-box__content{
+                padding: 40px 0 20px;
+            }
+            .stillQuestions-box__contact{
+                padding: 0 0 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .stillQuestions-box{
+        .stillQuestions-box__img{
+            margin: -30px -15px 0;
+            width: calc(100% + 30px);
+        }
+    }
+}

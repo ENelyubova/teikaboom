@@ -1,0 +1,314 @@
+.parkView-info{
+    .parkView-info__item{
+        &.parkView-info__txt{
+            width: calc(100% - 705px);
+            padding: 0 45px 0 0;
+        }
+        &.parkView-info__contacts{
+            width: 705px;
+        }
+    }
+}
+
+.parkView-collapse{
+    .parkView-collapse__body{
+        position: relative;
+		display: none;
+        visibility: hidden;
+		height: 0;
+    }
+    .parkView-collapse__header{
+        margin: 15px 0 0;
+        a{
+            svg{
+                @include transform(rotate(0deg));
+            }
+            &:hover{
+                svg{
+                    @include transform(rotate(0deg));
+                }
+            }
+        }
+    }
+    &.active{
+        .parkView-collapse__body{
+            display: block;
+            visibility: visible;
+            height:auto;
+            opacity:1;
+            margin: 17px 0 0;
+        }
+        .parkView-collapse__header{
+            a{
+                svg{
+                    @include transform(rotate(180deg));
+                }
+                &:hover{
+                    svg{
+                        @include transform(rotate(180deg));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parkView-contact-map{
+    width: 100%;
+    height: 345px;
+}
+
+.parkView-contact-howToGet{
+    &.park-station{
+        ul{
+            li{
+                color: $color333333;
+                font-size: 18px;
+                font-family: $fontRegular;
+                font-weight: 400;
+                line-height: 1.0;
+                margin: 0 0 10px;
+                strong{
+                    font-family: $fontMedium;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.parkView-booking-table{
+    display: table;
+    width: 100%;
+    border: 1px solid #DFE0EB;
+    margin: 0 0 30px;
+    @include border-radius(10px);
+    .parkView-booking-table__row{
+        display: table-row;
+        &.parkView-booking-table__row_head{
+            .parkView-booking-table__col{
+                background: $colorF5F6FC;
+                padding-top: 22px;
+                padding-bottom: 20px;
+                @include border-radius(10px 0 0 0);
+                &:last-child{
+                    @include border-radius(0 10px 0 0);
+                }
+            }
+        }
+        &:last-child{
+            .parkView-booking-table__col{
+                border-bottom: none;
+            }
+        }
+    }
+    .parkView-booking-table__col{
+        display: table-cell;
+        width: 50%;
+        padding: 15px 30px 25px;
+        border-bottom: 1px solid #DFE0EB;
+        border-right: 1px solid #DFE0EB;
+        // .parkView-data {
+            .parkView-data__value{
+                font-size: 20px;
+            }
+        // }
+        &:last-child{
+            border-right: none;
+        }
+    }
+}
+.booking-time-list{
+    .booking-time-list__item{
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        height: 42px;
+        color: $color013D57;
+        font-size: 18px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        padding: 11px 12px;
+        margin: 5px 5px 0 0;
+        background: $colorF5F6FC;
+        @include border-radius(4px);
+    }
+}
+.days-list{
+    padding: 3px 0 0;
+    .days-list__item{
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        width: 24px;
+        height: 24px;
+        color: $color013D57;
+        font-size: 11px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 13px;
+        padding: 5px 4px;
+        margin: 5px 5px 0 0;
+        background: $colorDFE0EB;
+        @include border-radius(4px);
+        &.days-list__item_weekend{
+            color: $colorWhite;
+            background: $colorF55790;
+        }
+        &.days-list__item_star{
+            &:before{
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                background: url('../images/icon/icon-star-weekend.svg') no-repeat;
+            }
+        }
+    }
+}
+
+.parkView-booking-but{
+    margin: 0 0 25px;
+    .parkView-booking-but__button{
+        width: 145px;
+    }
+    .parkView-booking-but__terms{
+        width: calc(100% - 145px);
+        padding: 0 0 0 30px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .parkView-info{
+        .parkView-info__item{
+            &.parkView-info__txt{
+                width: calc(100% - 600px);
+                padding: 0 45px 0 0;
+            }
+            &.parkView-info__contacts{
+                width: 600px;
+            }
+        }
+    }
+    
+    .parkView-contact-howToGet{
+        &.park-station{
+            ul{
+                li{
+                    font-size: 16px;
+                    line-height: 1.0;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+
+    .parkView-booking-table{
+        .parkView-booking-table__col{
+            padding: 15px 20px 25px;
+            .parkView-data__value{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .parkView-info{
+        .parkView-info__item{
+            &.parkView-info__txt{
+                width: calc(100% - 480px);
+                padding: 0 45px 0 0;
+            }
+            &.parkView-info__contacts{
+                width: 480px;
+            }
+        }
+    }
+
+    .parkView-contact-howToGet{
+        &.park-station{
+            ul{
+                li{
+                    font-size: 14px;
+                    line-height: 1.0;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+
+    .parkView-booking-table{
+        .parkView-booking-table__row{
+            &.parkView-booking-table__row_head{
+                .parkView-booking-table__col{
+                    padding-top: 16px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+        .parkView-booking-table__col{
+            padding: 10px 20px 20px;
+            .parkView-data__value{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-info{
+        .parkView-info__item{
+            &.parkView-info__txt{
+                width: 100%;
+                padding: 0 0 25px;
+            }
+            &.parkView-info__contacts{
+                width: 100%;
+            }
+        }
+    }
+    .parkView-booking-table{
+        .parkView-booking-table__col{
+            padding: 10px 15px 20px;
+            .parkView-data__value{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .parkView-booking-table{
+        .parkView-booking-table__row{
+            &.parkView-booking-table__row_head{
+                .parkView-booking-table__col{
+                    padding-top: 10px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+        .parkView-booking-table__col{
+            padding: 7px 7px 12px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .parkView-booking-but{
+        margin: 0 0 5px;
+        .parkView-booking-but__button{
+            width: 145px;
+        }
+        .parkView-booking-but__terms{
+            width: 100%;
+            padding: 15px 0 0;
+            br{
+                display: none;
+            }
+        }
+    }
+}

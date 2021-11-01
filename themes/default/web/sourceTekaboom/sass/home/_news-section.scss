@@ -1,0 +1,43 @@
+.news-section{
+	background: $colorF5F6FC;
+	padding: 60px 0;
+}
+
+.news-header{
+	padding: 0 0 40px;
+	.news-header__heading{
+	}
+}
+
+
+
+@media (max-width: 1600px) {
+	.news-header{
+		padding: 0 0 35px;
+	}
+}
+
+@media (max-width: 640px) {
+	.news-section{
+		.content{
+			position: relative;
+		}
+	}
+	
+	.news-header{
+		.news-header__but{
+			position: absolute;
+			bottom: 0;
+			right: 20px;
+			width: auto;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.news-header{
+		.news-header__but{
+			right: 15px;
+		}
+	}
+}

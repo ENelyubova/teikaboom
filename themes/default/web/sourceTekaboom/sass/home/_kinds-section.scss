@@ -1,0 +1,47 @@
+.kinds-section{
+	position: relative;
+	z-index: -1;
+	source, img{
+		max-width: 1500px;
+	}
+}
+
+@media (max-width: 1600px) {
+	.kinds-section{
+		source, img{
+			max-width: 1220px;
+		}
+	}
+}
+
+@media (max-width: 1240px) {
+	.kinds-section{
+		source, img{
+			max-width: 980px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.kinds-section{
+		source, img{
+			max-width: 720px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.kinds-section{
+		source, img{
+			max-width: 620px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.kinds-section{
+		source, img{
+			max-width: 100%;
+		}
+	}
+}

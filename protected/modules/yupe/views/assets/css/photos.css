@@ -1,0 +1,218 @@
+.tox-tinymce{
+    display: -webkit-flex !important;
+     display: -webkit-box !important;
+     display: -ms-flexbox !important;
+        display: -moz-box !important;
+            display: flex !important;
+}
+.panel-group .panel{
+    overflow: visible;
+}
+.image-settings .dropdown-menu{
+    /*left: auto;*/
+    /*right: 0;*/
+}
+
+.input-disable{
+    pointer-events: none;
+    opacity: .7;
+}
+
+.imageField-wrapper{
+    position: relative;
+    /*float: left;*/
+    text-align: center;
+    /*width: 300px;*/
+    /*margin: 0 5px 10px;*/
+    padding: 0 !important;
+    border: 1px solid #cecece;
+}
+.imageField-wrapper .gallery-thumbnail{
+    height: auto;
+}
+.gallery-thumbnail .move-sign{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.field-photo{
+    position: relative;
+    display: block;
+    /*float: left;*/
+    margin: 5px;
+    position: relative;
+}
+.field-photo .form-group label{
+    font-size: 12px;
+}
+.field-photo__img{
+    display: -webkit-flex !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+        display: -moz-box !important;
+            display: flex !important;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+    height: 190px;
+    /*line-height: 190px;*/
+    /*padding: 0 0 10px;*/
+    background: rgba(0, 0, 0, 0.1);
+}
+.field-photo__img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.image-settings .btn{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    float: none;
+    padding: 0;
+    border-radius: 5px !important;
+}
+.image-settings .row{
+    padding: 5px 0;
+}
+.modal-my:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+.modal-my .modal-dialog {
+    position: relative;
+    z-index: 10;
+    width: 740px;
+    margin: auto;
+    padding: 60px 0 10px;
+}
+.modal-my .modal-header{
+    padding: 25px;
+}
+.modal-my .modal-header .close {
+    margin-top: -9px;
+    opacity: .7;
+}
+.modal-my.in{
+    display: -webkit-flex !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+        display: -moz-box !important;
+            display: flex !important;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.modal-my .modal-preview-image{
+    display: -webkit-flex !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+        display: -moz-box !important;
+            display: flex !important;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 230px;
+}
+.modal-my img{
+    max-width: 215px;
+}
+.modal-my textarea{
+    max-width: 100%!important;
+    min-width: 100%!important;
+    min-height: 135px!important;
+    max-height: 135px!important;
+}
+
+/*  */
+/* file-drop-zone */
+/*  */
+
+.file-drop-zone{
+    margin-bottom: 5px;
+}
+
+.file-drop-zone-title{
+    padding: 30px 10px!important;
+
+}
+.file-preview{
+    margin-bottom: 0;
+    border: none;
+}
+.photo-add-input{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 0 0 40px;
+}
+.photo-add-input label{
+    display: block;
+    text-align: left;
+    padding: 0 0 5px;
+}
+
+.photo-add-input span{
+    font-size: 20px;
+    opacity: .5;
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.photo-add-input .btn-file{
+    /*display: none;*/
+    margin: 15px 0 0;
+}
+.photo-add-input .hidden-xs{
+    font-size: 16px;
+    opacity: .5;
+    font-weight: 900;
+    position: static;
+}
+.photo-add-input .glyphicon-plus-sign:before{
+    display: none!important;
+}
+
+.group-wrapper{
+    padding: 20px;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 20px;
+}
+.group-wrapper:last-child{
+    margin-bottom: 0;
+}
+.groupTitle{
+    margin-bottom: 10px;
+    font-weight: 600;
+    background:#428bca;
+    color:#fff;
+    padding:10px;
+}

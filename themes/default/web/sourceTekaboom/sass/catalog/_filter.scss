@@ -1,0 +1,391 @@
+.ajax-loading{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	// opacity: 0;
+	z-index: 100;
+	pointer-events: none;
+	// @include transition(all .3s linear);
+	&:after{
+		content: '';
+		display: block;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4) url('../images/ajax-loading.gif') center no-repeat !important;
+	}
+	&.active{
+		opacity: 1;
+	}
+}
+.list-view-loading{
+	background: url('../images/loading.gif') no-repeat !important;
+	background: transparent !important;
+    background-position-y: 57px !important;
+    background-position-x: 0 !important;
+}
+
+.but-menu-filter{
+	display: none;
+	width: 180px;
+	margin: 0 0 30px;
+	span{
+		padding: 0 0 0 10px;
+	}
+}
+
+.filter-content{
+	input[type='reset'], input[type="submit"], button{
+		width: 100%;
+		span{
+			pointer-events: none;
+		}
+	}
+}
+.filter-button{
+	button{
+		margin: 15px 0 0;
+		@include border-radius(0);
+	}
+	&:hover, &:focus, &:active{
+		button[type='reset']{
+			svg.filter-close{
+				@include transform(rotate(90deg) !important);
+			}
+		}
+	}
+}
+/* Блок с фильтром */
+.filter-block{
+	background: #fff;
+	border: 1px solid #E9EAF3;
+	margin: -1px 0px 0px;
+	.filter-block__header{
+		position: relative;
+		color: #373E44;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 21px;
+		cursor: pointer;
+		padding: 15px 25px;
+		span{
+			width: calc(100% - 14px);
+			padding: 0 0 0 12px;
+		}
+		svg{
+			width: 12px;
+			height: 12px;
+			margin: 3px 0 0 2px;
+			@include transform(rotate(180deg));
+			path{
+				fill: #373E44;
+			}
+		}
+		&.no-active{
+			svg{
+				@include transform(rotate(0deg));
+			}
+		}
+	}
+	.filter-block__reset{
+		color: #8B8B8B;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: right;
+		a{
+			color: #8B8B8B;
+			border-bottom: 1px solid #8B8B8B;
+			&:hover, &:focus, &:active{
+				color: #373E44;
+				border-color: #373E44;
+			}
+		}
+	}
+	.filter-block__body{
+		padding: 5px 10px 10px 25px;
+		&.no-active{
+			display: none;
+		}
+	}
+	.filter-block__list{
+		position: relative;
+	 	
+		&.active{
+			height: 240px;
+		}
+	}
+	.filter-block__more{
+		display: inline-block;
+		margin: 5px 0 10px;
+	}
+	.filter-block__footer{
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			top: -20px;
+			display: block;
+			width: 100%;
+			height: 20px;
+			background: rgba(255,255,255,0);
+			background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,1)));
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+			background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+			background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+		}
+	}
+	&.filter-block-category{
+		.filter-block__header{
+			color: #FFFFFF;
+			background: #52AC62;
+			svg{
+				path{
+					fill: #FFFFFF;
+				}
+			}
+		}
+		.filter-block__body{
+			padding-top: 15px;
+		}
+	}
+	&.filter-block-input-range{
+		.filter-block__body{
+			padding: 5px 25px 25px;
+		}
+	}
+}
+
+/* Список категорий */
+.category-list-filter{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	.category-list-filter__item{
+		padding: 0 0 10px;
+		a{
+			position: relative;
+			color: #373E44;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 1.1;
+			border-bottom: 1px solid transparent;
+			// &:after{
+			// 	content: '';
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	left: 0;
+			// 	width: 0;
+			// 	height: 1px;
+			// 	opacity: 0;
+			// 	background: #52AC62;
+			// 	@include transition(all .3s linear);
+			// }
+			&:hover{
+				color: #52AC62;
+			}
+			&.active {
+				color: #52AC62;
+				border--color: #52AC62;
+				// &:after{
+				// 	width: 100%;
+				// 	opacity: 1;
+				// }
+			}
+		}
+	}
+}
+
+.input-check{
+	width: 13px;
+    height: 13px;
+	&:before, &:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include border-radius(50%);
+		@include transition(all .3s);
+	}
+	&:before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(#b8b8b8, 1);
+    }
+    &:after {
+        top: calc(50% - 3.5px);
+    	left: calc(50% - 3.5px);
+		width: 7px;
+    	height: 7px;
+        background: rgba(#888888, 1);
+        opacity: 0;
+    }
+    &.active, &:hover{
+		&:after {
+	        opacity: 1;
+	    }
+	}
+}
+
+/* Чекбоксы */
+.filter-checkbox{
+	position: relative;
+	width: 100%;
+	margin: 0;
+    padding: 0 0 20px;
+	label{
+		@include flexbox();
+		@include align-items(center);
+		position: relative;
+		color: #6F6F6F;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.2;
+		margin: 0;
+	}
+	input[type="checkbox"] {
+	    position: absolute;
+	    left: -9999px;
+	    & + label {
+		    padding-left: 30px;
+		    &:before{
+		    	content: '';
+		    	display: block;
+		    	position: absolute;
+		    	top: 0;
+		    	left: 0;
+		    	background: url('../images/icon/checkbox.png') 0 0 no-repeat;
+		    	width: 20px;
+		    	height: 20px;
+		    }
+		}
+		&:checked{
+			& + label {
+				&:before{
+			    	background-position: 0 -21px;
+				}
+			}
+		}
+	}
+
+	input[type="radio"]{
+        vertical-align: top;
+        width: 14px;
+        height: 14px;
+        margin: 0 3px 0 0;
+        & + label {
+            font-weight: normal;
+            cursor: pointer;
+            
+        }
+        &:not(checked) {
+            position: absolute;
+            opacity: 0;
+            & + label {
+                position: relative;
+                padding: 0 0 0 30px;
+                
+                &:before, &:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					@include border-radius(50%);
+					@include transition(all .3s);
+				}
+				&:before {
+			        top: 0;
+			        left: 0;
+			        width: 13px;
+    				height: 13px;
+			        border: 1px solid rgba(#b8b8b8, 1);
+			    }
+			    &:after {
+			        top: calc(50% - 3.5px);
+			    	left: calc(50% - 3.5px);
+					width: 7px;
+			    	height: 7px;
+			        background: rgba(#888888, 1);
+			        opacity: 0;
+			    }
+            }
+        }
+        &:checked{
+            & + label{
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* Два инпута у range */
+.filter-block-range{
+	@include flexbox();
+	@include flex-wrap(wrap);
+	margin: 0 -6px;
+	.filter-block-range__item{
+		width: calc(100% / 2 - 12px);
+		margin: 0 6px 10px;
+		border: 1px solid #DBDBDB;
+		@include border-radius(0);
+		&:hover, &:focus {
+			@include box-shadow(none);
+			border-color: #DBDBDB;
+		}
+	}
+	 input[type="number"]{
+		-webkit-appearance: none;
+		-moz-appearance: textfield;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		&:hover,
+		&:focus {
+			-webkit-appearance: none;
+			-moz-appearance: number-input;
+		}
+	} 		
+}
+
+@media (max-width: 1240px){
+	.but-menu-filter{
+		display: block;
+	}
+	.filter-button{
+		padding: 20px 25px 5px;
+		button{
+			padding: 0 20px;
+			margin: 0 0 15px;
+		}
+	}
+	/* Блок с фильтром */
+	.filter-block{
+		&.filter-block-category{
+			.filter-block__body{
+				padding: 10px 25px 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.but-menu-filter{
+		// width: 100%;
+		width: 150px;
+	}
+}

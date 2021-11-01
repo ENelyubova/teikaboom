@@ -1,0 +1,118 @@
+.parkView-childpage-list{
+    margin: 25px 0 0;
+    .parkView-childpage-list__item{
+        padding: 40px 0;
+        border-top: 1px solid $colorDFE0EB;
+    }
+}
+
+.childpage-list{
+    .childpage-list__content{
+        width: calc(100% - 705px);
+        padding: 0 40px 0 0;
+    }
+    .childpage-list__carousel{
+        width: 705px;
+        overflow: hidden;
+    }
+    .childpage-list__name{
+        color: $color013D57;
+        font-size: 30px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+        margin: 0 0 15px;
+    }
+    .childpage-list__age{
+        color: $color013D57;
+        font-size: 18px;
+        font-family: $fontMedium;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        margin: 0 0 15px;
+        span{
+            color: $color999999;
+            font-size: 16px;
+            font-family: $fontRegular;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 19px;
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .childpage-list{
+        .childpage-list__content{
+            width: calc(100% - 600px);
+            padding: 0 40px 0 0;
+        }
+        .childpage-list__carousel{
+            width: 600px;
+        }
+        .childpage-list__name{
+            font-size: 26px;
+            line-height: 32px;
+            margin: 0 0 15px;
+        }
+        .childpage-list__age{
+            font-size: 16px;
+            line-height: 19px;
+            margin: 0 0 15px;
+            span{
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .childpage-list{
+        .childpage-list__content{
+            width: calc(100% - 480px);
+            padding: 0 30px 0 0;
+        }
+        .childpage-list__carousel{
+            width: 480px;
+        }
+        .childpage-list__name{
+            font-size: 24px;
+            line-height: 30px;
+            margin: 0 0 10px;
+        }
+        .childpage-list__age{
+            font-size: 14px;
+            line-height: 17px;
+            margin: 0 0 10px;
+            span{
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-childpage-list{
+        .parkView-childpage-list__item{
+            padding: 20px 0 30px;
+        }
+    }
+    .childpage-list{
+        .childpage-list__content{
+            width: 100%;
+            padding: 0 0 15px;
+        }
+        .childpage-list__carousel{
+            width: 100%;
+        }
+        .childpage-list__name{
+            font-size: 22px;
+            line-height: 28px;
+            margin: 0 0 10px;
+        }
+    }
+}

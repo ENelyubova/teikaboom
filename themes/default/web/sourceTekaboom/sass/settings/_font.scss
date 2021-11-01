@@ -1,0 +1,35 @@
+$colorWhite: #FFFFFF;
+$colorBlack: #000000;
+$colorFFB23E: #FFB23E; // Желтый
+$colorF55790: #F55790; // Розовый
+$color333333: #333333;
+$color013D57: #013D57; // Цвет у контактов в шапке
+$colorDFE0EB: #DFE0EB;
+$color555555: #555555;
+$colorFEFFF2: #FEFFF2; // фон 2-ого блока на главной
+$color00B5AA: #00B5AA; // Бирюзовый  цвет
+$color999999: #999999;
+$colorF5F6FC: #F5F6FC;
+
+$color212121: #212121;
+$colora8a7a7: #a8a7a7;
+$colord9d1bc: #d9d1bc;
+$colorOrange: #EC4700;
+$color454545: #454545;
+$color757575: #757575;
+$colorDBDBDB: #DBDBDB;
+$colordddddd: #dddddd;
+
+
+ @include fontface("SFUIDisplay-Regular", "SFUIDisplay-Regular");
+ @include fontface("SFUIDisplay-Medium", "SFUIDisplay-Medium");
+ @include fontface("SFUIDisplay-Bold", "SFUIDisplay-Bold");
+ @include fontface("SFUIDisplay-Black", "SFUIDisplay-Black");
+
+//$fontFamily: 'Verdana', sans-serif;
+
+$fontRegular: 'SFUIDisplay-Regular';
+$fontMedium: 'SFUIDisplay-Medium';
+$fontBold: 'SFUIDisplay-Bold';
+$fontBlack: 'SFUIDisplay-Black';
+

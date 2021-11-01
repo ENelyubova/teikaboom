@@ -1,0 +1,47 @@
+.breadcrumb{
+	background: transparent;
+	margin: 0px;
+	padding: 0 0 25px; 
+	li{
+		position: relative;
+		display: inline;
+		color: $colorWhite;
+		font-size: 14px;
+		font-family: $fontRegular;
+		line-height: 22px;
+		font-weight: normal;
+		a{
+			color: $colorWhite;
+			border-bottom: 1px solid $colorWhite;
+		}
+		&.active{
+			color: $colorWhite;
+			a{
+				color: $colorWhite;
+			}
+		}
+	}
+	&>li{
+		&+li{
+			&:before{
+				color: $colorWhite;
+				padding: 0px 6px 0px 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.breadcrumb{
+		li{
+			line-height: 18px;
+		}
+		&>li{
+			&+li{
+				&:before{
+					padding: 0px 4px 0px 6px;
+				}
+			}
+		}
+	}
+}

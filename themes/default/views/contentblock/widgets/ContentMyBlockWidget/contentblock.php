@@ -1,0 +1,1 @@
+<?= Yii::app()->controller->decodeWidgets($block->content); ?>

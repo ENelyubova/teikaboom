@@ -1,0 +1,15 @@
+.icon{
+	display: inline-block;
+	vertical-align: top;
+	@include background-size(contain !important);
+	&.icon-download{
+		width: 16px;
+		height: 18px;
+		background: url('../images/icon/icon-download.svg') center no-repeat;
+	}
+	&.icon-ruble{
+		width: 10px;
+		height: 13px;
+		background: url('../images/icon/icon-ruble.svg') center no-repeat;
+	}
+}

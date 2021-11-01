@@ -1,0 +1,103 @@
+.parkView-header-main{
+    width: 100%;
+    min-height: 380px;
+    padding: 150px 0 0;
+    margin: 0 0 40px;
+    .content{
+        position: relative;
+    }
+    .parkView-header-main__nav{
+        position: relative;
+        z-index: 1;
+    }
+    .parkView-header-main__info{
+        position: relative;
+        z-index: 1;
+        width: 570px;
+    }
+    .parkView-header-main__img{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        source, img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 934px;
+        }
+    }
+    .parkView-header-main__name{
+        padding: 0 0 13px;
+    }
+    .parkView-header-main__station, .parkView-header-main__location{
+        color: $colorWhite;
+        margin: 0 0 16px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .parkView-header-main{
+        min-height: 360px;
+        padding: 150px 0 0;
+        margin: 0 0 40px;
+        .parkView-header-main__info{
+            width: 570px;
+        }
+        .parkView-header-main__img{
+            source, img{
+                max-width: 760px;
+            }
+        }
+        .parkView-header-main__name{
+            padding: 0 0 12px;
+        }
+        .parkView-header-main__station, .parkView-header-main__location{
+            margin: 0 0 14px;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .parkView-header-main{
+        min-height: 330px;
+        padding: 140px 0 0;
+        margin: 0 0 40px;
+        .parkView-header-main__info{
+            width: 540px;
+        }
+        .parkView-header-main__img{
+            source, img{
+                max-width: 690px;
+            }
+        }
+        .parkView-header-main__name{
+            padding: 0 0 12px;
+        }
+        .parkView-header-main__station, .parkView-header-main__location{
+            margin: 0 0 12px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-header-main{
+        min-height: 220px;
+        padding: 35px 0 10px;
+        margin: 0 0 35px;
+        .parkView-header-main__info{
+            width: 100%;
+        }
+        .parkView-header-main__img{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .parkView-header-main{
+        min-height: 175px;
+        padding: 30px 0 10px;
+    }
+}

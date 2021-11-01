@@ -1,0 +1,22 @@
+.notifications {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    &.top-right {
+        right: 15px;
+        bottom: 15px;
+    }
+    & > div {
+        position: relative;
+        z-index: 9999;
+        background-color:  #52AC62;
+        border: 2px solid #52AC62;
+        color: #fff;
+        padding: 20px 25px;
+        @include border-radius(4px);
+    }
+}
+
+@import "_catalog-controls";
+@import "_selected-filters";
+@import "_sorter";

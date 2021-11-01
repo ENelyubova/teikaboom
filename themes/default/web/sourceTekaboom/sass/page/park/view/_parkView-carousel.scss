@@ -1,0 +1,180 @@
+.parkView-carousel{
+    margin: 0 -10px 40px !important;
+    .slick-list{
+        overflow: visible;
+    }
+    .slick-track{
+        @include flexbox();
+        height: auto;
+    }
+    .parkView-carousel__item{
+        padding: 0 10px;
+        &:hover{
+            .parkView-carousel__img{
+                source, img, video{
+                    @include transform(scale(1.05));
+                    @include transition(.2s);
+                }
+            }
+        }
+    }
+    .parkView-carousel__img{
+        width: 538px;
+        height: 320px;
+        overflow: hidden;
+        @include border-radius(10px);
+    }
+}
+
+.parkView-childpage-carousel{
+    margin: 0 !important;
+    .slick-list{
+        // overflow: visible;
+    }
+    .slick-track{
+        @include flexbox();
+        height: auto;
+    }
+    .parkView-childpage-carousel__item{
+        padding: 0 20px 0 0;
+        &:hover{
+            .parkView-childpage-carousel__img{
+                source, img, video{
+                    @include transform(scale(1.05));
+                    @include transition(.2s);
+                }
+            }
+        }
+    }
+    .parkView-childpage-carousel__img{
+        width: 509px;
+        height: 340px;
+        overflow: hidden;
+        @include border-radius(10px);
+    }
+    .slick-prev,
+    .slick-next {
+        width: 25px;
+        height: 50px;
+        svg{
+            path{
+                fill: $color013D57;
+                &.circle{
+                    fill: rgba($colorWhite, 1);
+                }
+            }
+            rect{
+                fill: rgba($colorWhite, 1);
+            }
+        }
+        &:hover {
+            border-color: transparent;
+            svg{
+                path{
+                    fill: $colorWhite;
+                    &.circle{
+                        fill: rgba($colorF55790, 1);
+                    }
+                }
+                rect{
+                    fill: rgba($colorF55790, 1);
+                }
+            }
+        }
+        &.slick-disabled {
+            opacity: 1;
+            svg{
+                path{
+                    fill: rgba($color013D57, .5);
+                    &.circle{
+                        fill: rgba($colorWhite, 1);
+                    }
+                }
+                rect{
+                    fill: rgba($colorWhite, 1);
+                }
+            }
+        }
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        right: 0;
+    }
+
+    &.parkView-restaurannts-carousel{
+    }
+}
+
+@media (max-width: 1600px) {
+    .parkView-carousel{
+        .parkView-carousel__img{
+            width: 480px;
+            height: 285px;
+        }
+    }
+    .parkView-childpage-carousel{
+        .parkView-childpage-carousel__img{
+            width: 480px;
+            height: 320px;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .parkView-carousel{
+        .parkView-carousel__img{
+            width: 400px;
+            height: 240px;
+        }
+    }
+    .parkView-childpage-carousel{
+        .parkView-childpage-carousel__img{
+            width: 400px;
+            height: 270px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parkView-carousel{
+        .parkView-carousel__img{
+            width: 340px;
+            height: 200px;
+        }
+    }
+    .parkView-childpage-carousel{
+        .parkView-childpage-carousel__item{
+            padding: 0 20px 0 0;
+        }
+        .parkView-childpage-carousel__img{
+            width: 340px;
+            height: 230px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .parkView-carousel{
+        margin: 0 -5px 30px !important;
+        .parkView-carousel__item{
+            padding: 0 5px;
+        }
+        .parkView-carousel__img{
+            width: 270px;
+            height: 200px;
+        }
+    }
+}
+@media (max-width: 540px) {
+    .parkView-childpage-carousel{
+        .parkView-childpage-carousel__item{
+            padding: 0 10px 0 0;
+        }
+        .parkView-childpage-carousel__img{
+            width: 263px;
+            height: 200px;
+        }
+    }
+}

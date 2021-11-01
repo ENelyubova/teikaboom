@@ -1,0 +1,397 @@
+.but{
+	@include flexbox();
+	@include align-items(center);
+	@include justify-content(center);
+	width: auto;
+	height: 50px;
+	color: $colorBlack;
+	font-size: 16px;
+	font-family: $fontMedium;
+	line-height: 19px;
+	font-weight: 500;
+	padding: 0 15px;
+	border: none;
+	@include box-shadow(none);
+	@include border-radius(5px);
+	@include transition(all .3s linear);
+	&.but-border{
+		background: transparent;
+		border: 1px solid #E9EAF3;
+		&.but-svg{
+			svg{
+				path{
+					fill: #000;
+				}
+			}
+		}
+		&.but-border-white{
+			color: #fff;
+			border-color: #fff;
+			svg{
+				path{
+					fill: #fff;
+				}
+			}
+		}
+	}
+	&.but-svg{
+		-webkit-appearance: listbox;
+		@include transform(perspective(1px) translateZ(0));
+		@include transition-duration(0.1s);
+		&.but-svg-right{
+			padding-right: 20px;
+			span{
+				padding: 0 15px 0 0;
+			}	
+		}
+		&.but-svg-left{
+			span{
+				padding: 0 0 0 15px;
+			}	
+		}
+		svg{
+			width: 17px;
+			height: 12px;
+			@include transform(translateZ(0));
+			@include transition(transform 0.2s ease-out);
+			path{
+				fill: #fff;
+			}
+		}
+	}
+	&.but-yellow{
+		color: $colorWhite;
+		background: $colorFFB23E;
+	}
+	&.but-pink{
+		color: $colorWhite;
+		background: $colorF55790;
+	}
+	&.but-animate-3d{
+	}
+	&.but-animate-transform{
+		@include transition(transform 0.2s ease-out);
+	}
+	&.but-animation{
+		overflow: hidden;
+	    @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));
+		&:before, 
+		&:after {    
+		    content: "";
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+		    height: 100%;
+		    left: -110%;
+		    top: 0;
+			opacity: 0.1;
+			background: rgba(0, 0, 0, 0.6);    
+		    @include transform(skewX(25deg));   
+			@include transition(.5s ease);
+			pointer-events: none;
+		}
+	}
+	&:hover, &:focus, &:active{
+		border: none;
+		outline: 0;
+		color: #4D565F;
+		@include box-shadow(none);
+		&.but-border{
+			background: #E9EAF3;
+			border: 1px solid #E9EAF3;
+			&.but-svg{
+				svg{
+					path{
+						fill: #000;
+					}
+				}
+			}
+			&.but-border-white{
+				color: #000;
+				background: #fff;
+				border-color: #fff;
+				svg{
+					path{
+						fill: #000;
+					}
+				}
+			}
+		}
+		&.but-svg{
+			&.but-svg-right{
+				svg{
+					@include transform(translateX(-3px));
+				}
+			}
+			&.but-svg-left{
+				svg{
+					@include transform(translateX(3px));
+				}
+			}
+		}
+		&.but-yellow{
+			color: $colorWhite;
+			background: $colorFFB23E;
+		}
+		&.but-pink{
+			color: $colorWhite;
+			background: $colorF55790;
+		}
+		&.but-animate-3d{
+			// @include box-shadow(0px 0px 10px -15px #000000 inset);
+			@include transform(scaleX(0.95) translateY(2px));
+		}
+		&.but-animate-transform{
+			@include transform(translateY(-2px));
+			@include box-shadow(0 3px 15px rgba(0, 0, 0, 0.15));
+		}
+		&.but-animation{
+			&:before {
+			    left: -10%;
+			    @include transition(.3s ease);
+			}
+			&:hover:after {
+			    left: -20%;
+			}
+		}
+	}
+}
+
+.but-link{
+	position: relative;
+	color: $color013D57;
+	font-size: 18px;
+	font-family: $fontMedium;
+	font-weight: 500;
+	line-height: 21px;
+	padding: 0;
+	&.but-link-svg{
+		-webkit-appearance: listbox;
+		@include transform(perspective(1px) translateZ(0));
+		@include transition-duration(0.1s);
+		&.but-link-svg-right{
+			span{
+				margin: 0 10px 0 0;
+			}	
+		}
+		&.but-link-svg-left{
+			span{
+				margin: 0 0 0 10px;
+			}	
+		}
+		svg{
+		    position: relative;
+    		top: 2px;
+			width: 25px;
+			height: 24px;
+			@include transform(translateZ(0));
+			@include transition(transform 0.2s ease-out);
+			path{
+				fill: $color013D57;
+			}
+			&.icon-up{
+				width: 13px;
+				height: 7px;
+				path{
+					fill: none;
+					stroke: $color013D57;
+				}
+			}
+			&.icon-back{
+				width: 10px;
+				height: 15px;
+				path{
+					fill: none;
+					stroke: $color013D57;
+				}
+			}
+			&.icon-share{
+				width: 10px;
+				height: 10px;
+			}
+		}
+		&:after{
+			display: none;
+		}
+	}
+	span{
+		position: relative;
+		&:after {
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    bottom: 0;
+		    display: block;
+		    width: 100%;
+		    height: 1px;
+		    background: $color013D57;
+		}
+	}
+	&.active-loader{
+		pointer-events: none;
+		display: inline-block;
+		padding: 0 20px 0 0;
+		background: url('../images/loading.gif') 100% center no-repeat !important;
+		@include transition(0s);
+		svg{
+			display: none;
+		}
+		span{
+			opacity: .7;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	&.but-link-white{
+		color: $colorWhite;
+		&.but-link-svg{
+			svg{
+				path{
+					fill: $colorWhite;
+				}
+				&.icon-up{
+					path{
+						fill: none;
+						stroke: $colorWhite;
+					}
+				}
+				&.icon-back{
+					path{
+						fill: none;
+						stroke: $colorWhite;
+					}
+				}
+			}
+			&:after{
+				display: none;
+			}
+		}
+		span{
+			&:after {
+				background: $colorWhite;
+			}
+		}
+	}
+	&:focus, &:active{
+		color: $color013D57;
+		&.but-link-white{
+			color: $colorWhite;
+		}
+	}
+	&:hover{
+		color: $color013D57;
+		&.but-link-svg{
+			&.but-link-svg-right{
+				svg{
+					@include transform(translateX(-3px));
+				}
+			}
+			&.but-link-svg-left{
+				svg{
+					@include transform(translateX(3px));
+				}
+			}
+		}
+		span{
+			&:after{
+				opacity: 0;
+			}
+		}
+		&.but-link-white{
+			color: $colorWhite;
+		}
+	}
+}
+
+.but-more{
+	position: relative;
+	color: #52AC62;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.0;
+	padding: 0 15px 0 0;
+	span{
+		border-bottom: 1px solid  #52AC62;
+	}
+	&:before {
+		content: "\f107";
+	    position: absolute;
+	    right: 0;
+	    top: 10px;
+	    display: inline-block;
+	    font: normal normal normal 14px/1 FontAwesome;
+	    font-size: inherit;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    @include transform(translateY(-50%));
+	}
+	&:hover{
+		color: #52AC62;
+	}
+	&.active{
+		&:before {
+			content: "\f106";
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.but{
+		height: 45px;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 0 15px;
+	}
+
+	.but-link{
+		font-size: 16px;
+		line-height: 19px;
+		&.but-link-svg{
+			svg{
+	    		top: 2px;
+				width: 22px;
+				height: 21px;
+				&.icon-up{
+					width: 11px;
+					height: 6px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1240px) {
+	.but{
+		height: 40px;
+	}
+	.but-link{
+		font-size: 15px;
+		line-height: 18px;
+		&.but-link-svg{
+			svg{
+	    		top: 2px;
+				width: 20px;
+				height: 19px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.but{
+		height: 36px;
+	}
+	.but-link{
+		font-size: 14px;
+		line-height: 18px;
+		&.but-link-svg{
+			svg{
+	    		top: 1px;
+			    width: 18px;
+			    height: 16px;
+			}
+		}
+	}
+}

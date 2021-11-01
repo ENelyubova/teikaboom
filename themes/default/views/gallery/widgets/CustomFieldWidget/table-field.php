@@ -1,0 +1,1 @@
+<?= $model->getAttributeValue($code)['value']; ?>
